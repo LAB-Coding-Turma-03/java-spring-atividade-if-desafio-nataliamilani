@@ -70,7 +70,6 @@ public class SimularValoresController {
 				valor_produto = (valor_produto - (5.00/100.00 * valor_produto));				
 			}else if (codTipoPagamento == 3){
 				desc_cond_pagamento = "Em duas parcelas sem nenhum desconto";
-				valor_produto = (valor_produto / 2);
 			}else if (codTipoPagamento == 4){
 				desc_cond_pagamento = "Em três vezes com 10% de juros";
 				valor_produto = ((valor_produto - (10.00/100.00 * valor_produto)) /3);				
@@ -90,7 +89,6 @@ public class SimularValoresController {
 				valor_produto = (valor_produto - (5.00/100.00 * valor_produto));				
 			}else if (codTipoPagamento == 3){
 				desc_cond_pagamento = "Em duas parcelas sem nenhum desconto";
-				valor_produto = (valor_produto / 2);
 			}else if (codTipoPagamento == 4){
 				desc_cond_pagamento = "Em três vezes com 10% de juros";
 				valor_produto = ((valor_produto - (10.00/100.00 * valor_produto)) /3);				
@@ -110,7 +108,6 @@ public class SimularValoresController {
 				valor_produto = (valor_produto - (5.00/100.00 * valor_produto));				
 			}else if (codTipoPagamento == 3){
 				desc_cond_pagamento = "Em duas parcelas sem nenhum desconto";
-				valor_produto = (valor_produto / 2);
 			}else if (codTipoPagamento == 4){
 				desc_cond_pagamento = "Em três vezes com 10% de juros";
 				valor_produto = ((valor_produto - (10.00/100.00 * valor_produto)) /3);				
@@ -129,7 +126,6 @@ public class SimularValoresController {
 				valor_produto = (valor_produto - (5.00/100.00 * valor_produto));				
 			}else if (codTipoPagamento == 3){
 				desc_cond_pagamento = "Em duas parcelas sem nenhum desconto";
-				valor_produto = (valor_produto / 2);
 			}else if (codTipoPagamento == 4){
 				desc_cond_pagamento = "Em três vezes com 10% de juros";
 				valor_produto = ((valor_produto - (10.00/100.00 * valor_produto)) /3);				
@@ -148,7 +144,6 @@ public class SimularValoresController {
 				valor_produto = (valor_produto - (5.00/100.00 * valor_produto));				
 			}else if (codTipoPagamento == 3){
 				desc_cond_pagamento = "Em duas parcelas sem nenhum desconto";
-				valor_produto = (valor_produto / 2);
 			}else if (codTipoPagamento == 4){
 				desc_cond_pagamento = "Em três vezes com 10% de juros";
 				valor_produto = ((valor_produto - (10.00/100.00 * valor_produto)) /3);				
@@ -161,7 +156,7 @@ public class SimularValoresController {
 
 
 		if (retorno){
-			return ResponseEntity.ok(desc_produto + " sendo pago " + desc_cond_pagamento + " custará " + df.format(valor_produto));
+			return ResponseEntity.ok(desc_produto + " sendo pago " + desc_cond_pagamento + " custará " + df.format(valor_produto) + " reais");
 		}else{
 			return ResponseEntity.ok("Parametro informado não existe, favor informar código de produto entre 1 e 5, e forma de pagamento entre 1 e 4");
 		}
